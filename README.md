@@ -1,1 +1,3 @@
 # typescript-boilerplate
+
+`npm install`
