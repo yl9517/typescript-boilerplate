@@ -10,12 +10,11 @@ const logFormat = printf(({ level, message, timestamp }) => {
 });
 
 const logger = winston.createLogger({
-  //* 로그 출력 형식 정의
   format: combine(
     timestamp({ format: "YYYY-MM-DD HH:mm:ss" }),
     label({ label: "[LOGGER]" }),
     simple(), // `${info.level}: ${info.message} JSON.stringify({ ...rest })` 포맷으로 출력
-    colorize({ all: true }), //색상
+    colorize({ all: true }),
     logFormat
   ),
 });
