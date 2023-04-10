@@ -17,7 +17,7 @@ app.use(indexRoutes);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.get("/", (req: Request, res: Response) => {
-  res.send(`Hello World~! It's version port : ${PORT}`);
+  res.send(`Hello World! It's version port : ${PORT}`);
 });
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
